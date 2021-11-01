@@ -51,30 +51,29 @@ namespace W3SHARE_Interface.Repo
 
         public UsersDTO ReturnUser(string email , string password)
         {
-            
+            UsersDTO user = new UsersDTO();
             int valuesReturned = 0;
 
-            String sql = ("SELECT * FROM dbo.tbl_user WHERE tbl_user_email = '"+email+"'AND tbl_user_password ='"+password+"'");
+            String sql = ("SELECT * FROM dbo.tbl_user WHERE tbl_user_email = '"+email+ "' AND tbl_user_password = '" + password + "' ");
 
             command = new SqlCommand(sql, con);
 
             reader = command.ExecuteReader();
 
-            //test that only 1 record is returned
-
             while (reader.Read())
             {
                 valuesReturned++;
+
+                user.ID = (int)reader.GetValue(4);
+                user.Name = reader.GetValue(1).ToString();
+                user.Surname = reader.GetValue(2).ToString();
+                user.Email = reader.GetValue(3).ToString();
             }
+
+            reader.Read();
 
             if (valuesReturned == 1 )
             {
-                UsersDTO user = new UsersDTO();
-                user.ID = (int)reader.GetValue(5);
-                user.Name = reader.GetValue(2).ToString();
-                user.Surname = reader.GetValue(3).ToString();
-                user.Email = reader.GetValue(4).ToString();
-
                 return user;
             }
             else
@@ -82,16 +81,7 @@ namespace W3SHARE_Interface.Repo
                 throw new Exception("No user returned");
             }
 
-            
-
-
-            
+       
         }
-
-
-
-
-    }
-
-    
+    } 
 }
