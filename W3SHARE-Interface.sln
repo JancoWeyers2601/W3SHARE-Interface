@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "W3SHARE-Interface", "W3SHARE-Interface\W3SHARE-Interface.csproj", "{0F00153A-F910-4F00-B614-3DD3A70ACB77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F00153A-F910-4F00-B614-3DD3A70ACB77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F00153A-F910-4F00-B614-3DD3A70ACB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F00153A-F910-4F00-B614-3DD3A70ACB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F00153A-F910-4F00-B614-3DD3A70ACB77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5678A2EC-DA2C-4B0D-9921-F5B1CF07DB8B}
+	EndGlobalSection
+EndGlobal

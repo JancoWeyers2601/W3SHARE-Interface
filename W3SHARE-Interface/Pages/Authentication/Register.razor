@@ -1,0 +1,23 @@
+﻿@page "/Register"
+
+
+<div class="form-group">
+    <label for="Name" class="text-info">Name: @name</label><br>
+    <input type="text" @bind="@name" name="Name" id="Name" class="form-control">
+</div>
+
+
+<button class="btn btn-primary" @onclick="Do">Click me</button>
+
+@code {
+
+
+    private string name = "" ;
+
+
+    private void Do()
+    {
+        name = name + "Ha";
+    }
+
+}
