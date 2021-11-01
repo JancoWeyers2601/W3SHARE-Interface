@@ -23,17 +23,19 @@ namespace W3SHARE_Interface.Pages.Authentication
             usersDTO.Password = this.Password;
 
             UsersRepo usersRepo = new UsersRepo();
-            bool result = usersRepo.AddUser(usersDTO);
+            
 
-            if (result)
+            if (usersRepo.AddUser(usersDTO) == true)
             {
                 // go to login
-                
+               
             }
             else
             {
                 // user already exist
             }
+
+            NavManager.NavigateTo("/Content");
         }  
     }
 

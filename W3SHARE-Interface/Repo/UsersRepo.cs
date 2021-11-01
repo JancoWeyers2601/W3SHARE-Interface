@@ -36,9 +36,6 @@ namespace W3SHARE_Interface.Repo
 
                 command = new SqlCommand(sql, con);
 
-                command.Parameters.AddWithValue("@a", "Max");
-                command.Parameters.AddWithValue("@b", "$1200");
-
                 adapter.InsertCommand = new SqlCommand(sql, con);
                 adapter.InsertCommand.ExecuteNonQuery();
 
@@ -72,16 +69,8 @@ namespace W3SHARE_Interface.Repo
 
             reader.Read();
 
-            if (valuesReturned == 1 )
-            {
-                return user;
-            }
-            else
-            {
-                throw new Exception("No user returned");
-            }
+            return user;
 
-       
         }
     } 
 }

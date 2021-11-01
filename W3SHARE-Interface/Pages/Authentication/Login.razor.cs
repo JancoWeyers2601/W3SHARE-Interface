@@ -24,14 +24,15 @@ namespace W3SHARE_Interface.Pages.Authentication
             UsersDTO usersDTO = usersRepo.ReturnUser(Email, Password);
 
 
-            if (usersDTO == null)
+            if (usersDTO.Name == null)
             {
                 //email and password incorect
                 working = "Nee";
             }
             else
             {
-                working = "JA" + usersDTO.Name;
+                working = "JA" + usersDTO.Name + usersDTO.Surname;
+                NavManager.NavigateTo("/Feed");
                 //Ingelog 
                 //Store usersDTO as logged in user
                 //redirect 1. stuur param na nuwe page 2. Cookies
