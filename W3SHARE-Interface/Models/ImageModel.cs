@@ -13,5 +13,7 @@ namespace W3SHARE_Interface.Models
         public DateTime CaptureDate { get; set; }
         public string CapturedBy { get; set; }
         public string ImageURL { get; set; }
+        public string User { get; set; }
+
     }
 }

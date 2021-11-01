@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using W3SHARE_Interface.Models;
 
-namespace W3SHARE_Interface.Pages
+namespace W3SHARE_Interface.Pages.User
 {
     public partial class Feed
     {
