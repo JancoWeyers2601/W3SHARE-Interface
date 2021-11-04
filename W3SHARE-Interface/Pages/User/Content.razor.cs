@@ -8,7 +8,7 @@ namespace W3SHARE_Interface.Pages.User
 {
     public partial class Content
     {
-        public IEnumerable<ImageModel> ImageList { get; set; }
+        public IEnumerable<ImageDTO> ImageList { get; set; }
 
         protected override Task OnInitializedAsync()
         {
@@ -19,7 +19,7 @@ namespace W3SHARE_Interface.Pages.User
         private void LoadImages()
         {
 
-            ImageModel I_1 = new ImageModel
+            ImageDTO I_1 = new ImageDTO
             {
                 ID = 1,
                 Geolocation = " Klerksdorp ",
@@ -31,7 +31,7 @@ namespace W3SHARE_Interface.Pages.User
             };
 
 
-            ImageModel I_2 = new ImageModel
+            ImageDTO I_2 = new ImageDTO
             {
                 ID = 2,
                 Geolocation = " Parys ",
@@ -43,7 +43,7 @@ namespace W3SHARE_Interface.Pages.User
             };
 
 
-            ImageList = new List<ImageModel> { I_1, I_2};
+            ImageList = new List<ImageDTO> { I_1, I_2};
         }
     }
 }

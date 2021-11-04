@@ -1,5 +1,43 @@
-﻿<h3>Upload</h3>
+﻿@page "/Upload"
+@inject NavigationManager NavManager
 
-@code {
+<div class="container">
+    <div id="login-row" class="row justify-content-center align-items-center">
+        <div id="login-column" class="col-md-6">
+            <div id="login-box" class="col-md-12">
+                <form id="login-form">
 
-}
+                    <h3 class="text-center text-info">Upload file</h3>
+
+                    <div class="form-group">
+                        <label for="Captured By" class="text-info">Captured By:</label><br>
+                        <input type="text" name="Captured By" id="Captured By" class="form-control" @bind="@CapturedBy">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Tags" class="text-info">Tags:</label><br>
+                        <input type="text" name="Tags" id="Tags" class="form-control" @bind="@Tags">
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <div class="custom-file" id="customFile" lang="es">
+                            <input type="file" class="custom-file-input" id="exampleInputFile" aria-describedby="fileHelp" @bind="@Url">
+                            <label class="custom-file-label" for="exampleInputFile">
+                                Select file...
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input name="submit" class="btn btn-info btn-md" value="Register" @onclick="UploadBTN">
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

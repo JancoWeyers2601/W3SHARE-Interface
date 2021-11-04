@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace W3SHARE_Interface.Models
 {
-    public class ImageModel
+    public class ImageDTO
     {
         public int ID { get; set; }
         public string  Geolocation { get; set; }

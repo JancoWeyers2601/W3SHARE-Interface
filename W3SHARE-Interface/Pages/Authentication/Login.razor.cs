@@ -1,22 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using System.Web;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using W3SHARE_Interface.Models;
 using W3SHARE_Interface.Repo;
+using RestSharp;
+using System.Net;
+using Microsoft.AspNetCore.Http;
 
 namespace W3SHARE_Interface.Pages.Authentication
 {
-   
-
     public partial class Login
     {
 
         public string working { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-
 
         private void LoginBTN()
         {
